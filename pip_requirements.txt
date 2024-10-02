@@ -1,0 +1,6 @@
+urdf_parser_py==0.0.4
+git+https://github.com/CarlottaSartore/urdf-modifiers.git@adding_change_shape
+git+https://github.com/CarlottaSartore/ADAM.git@reading_urdf_from_string
+scikit-learn
+cmaes
+nevergrad

@@ -1,0 +1,12 @@
+idyntree
+pyparsing
+casadi 
+urdfpy
+numpy
+mujoco-python=3.0.0
+bipedal-locomotion-framework=0.16.0
+pygad
+scipy
+mujoco-python-viewer
+pandas
+prettytable
