@@ -8,9 +8,10 @@ Automatic Gain Tuning for Humanoid Robots Walking Architectures Using Gradient-F
 
 <div align="center">
 
-C.Sartore*, M. Rando *, G. Romualdi, C. Molinari, L.Rosasco, D.Pucci
+C.Sartore*, M. Rando*, G. Romualdi, C. Molinari, L.Rosasco, D.Pucci
 _"Automatic Gain Tuning for Humanoid Robots Walking Architectures Using Gradient-Free Optimization Techniques"_
 in 2024 IEEE-RAS International Conference on Humanoid Robotics (Humanoids)
+
 Authors* contributed equally to this work. 
 </div>
 
@@ -34,7 +35,7 @@ Authors* contributed equally to this work.
 ### Installation
 
 
-:warning: The repository depends on [HSL for IPOPT (Coin-HSL)](https://www.hsl.rl.ac.uk/ipopt/), to correctly link the library please substitute [this](./Dockerfile#L110) line of the docker image with the absolute path to the `coinhsl.zip`. In particular for the paper experiments Coin-HSL 2019.05.21 have been used, but also later version should work fine. 
+:warning: The repository depends on [HSL for IPOPT (Coin-HSL)](https://www.hsl.rl.ac.uk/ipopt/), to correctly link the library please substitute [this](./Dockerfile#L110) line of the docker image with the absolute path to the `coinhsl.zip`. In particular, for the paper experiments Coin-HSL 2019.05.21 have been used, but also later version should work fine. 
 
 ⚠️ This repository depends on [docker](https://docs.docker.com/)
 
@@ -47,15 +48,16 @@ docker build --tag sartore_rando_humanoids_2024 .
 ```
 
 ### Running 
-In the src folder, you can find: 
-- optimize_fitness_ga: optimize the fitness function using genetic algorithm.
-- optimize_fitness_es: optimize the fitness function using evolutionary strategies.
-- optimize_fitness_tde: optimize the fitness function using differential evolution.
-- optimize_fitenss_cmaes: optimize the fitness function using cmaes.
+
+In the [src](https://github.com/ami-iit/paper_sartore_rando_2024_humanoids_zero_order_gain_tuning/tree/main/src) folder, you can find: 
+- `optimize_fitness_ga`: optimize the fitness function using genetic algorithm.
+- `optimize_fitness_es`: optimize the fitness function using evolutionary strategies.
+- `optimize_fitness_tde`: optimize the fitness function using differential evolution.
+- `optimize_fitenss_cmaes`: optimize the fitness function using cmaes.
 
 :warning: Each of the file run a repetition optimization: 10 independent optimization perfromed for the fitness that considers the torques, and 10 independent run performed for the fitenss that does not consider the torques.
 
-:warning: the optmization run with a multiprocess and will take 100 CPU cores. 
+:warning: The optimization runs with a multiprocess and will take 100 CPU cores. 
 
 ### Citing this work
 
