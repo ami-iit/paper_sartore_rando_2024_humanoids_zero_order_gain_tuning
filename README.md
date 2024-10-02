@@ -18,7 +18,8 @@ Authors* contributed equally to this work.
 <p align="center">
 
 
-[![Video](https://github.com/ami-iit/paper_sartore_2022_humanoids_ergonomic_design/assets/56030908/a0d66262-5539-481e-ac42-60219561b607)](https://github.com/ami-iit/paper_sartore_2022_humanoids_ergonomic_design/assets/56030908/6f73779e-5153-4048-bb1d-706c59b80490)
+[![Video](https://github.com/user-attachments/assets/118acc48-6961-4291-a348-a4a2bfe8cf8e)](https://github.com/user-attachments/assets/59f4a231-fb74-43d5-bac8-aadfb72f84f7
+)
 
 </p>
 
