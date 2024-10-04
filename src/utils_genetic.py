@@ -59,6 +59,9 @@ if(control_torso):
 else: 
     initializer.define_robot_model_no_torso()
 
+def initilize_directories(n_iter):
+    initializer.create_directories(n_iter)
+    
 def compute_fitness(x_k, save_in_database= True, visualize = False, weigths_tasks= [1.0, 0.0]):
     ga_settings_istance = GASettings()
     ik_min, ik_max = ga_settings_istance.get_limits_IK_array()

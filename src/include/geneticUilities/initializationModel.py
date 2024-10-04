@@ -25,6 +25,14 @@ class InitializationModel():
         self.frequency_milliseconds_centroidal_mpc = 100
 
     
+    def create_directories(self,n_iter):
+            self.common_path = os.path.dirname(os.path.abspath(__file__)) + "/../../"+ str(n_iter)
+            os.mkdir(self.common_path)
+            os.mkdir(self.common_path+"/results/")
+            self.dataBase_instance = DatabaseFitnessFunction(
+                self.common_path + "/results/fitnessDatabase"
+            )
+            
     def define_robot_model_with_torso(self): 
         self.with_torso = True
         joint_name_list = [
