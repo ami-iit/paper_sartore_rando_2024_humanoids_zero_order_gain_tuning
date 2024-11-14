@@ -1,0 +1,47 @@
+[project]
+authors = ["Carlotta Sartore  <carlotta.sartore@iit.it>", "Marco Rando <marco.rando@edu.unige.it>"]
+channels = ["conda-forge"]
+description = "Code related to the Automatic Gain Tuning for Humanoid Robots Walking Architectures Using Gradient-Free Optimization Techniques paper."
+name = "paper_sartore_rando_2024_humanoids_zero_order_gain_tuning"
+platforms = ["linux-64"]
+version = "0.0.0"
+
+[tasks]
+# The cwd is src as the scripts assume that they will run in src
+check_output = { cmd = "python check_output.py", cwd="src" }
+optimize_fitness_ga = { cmd = "python optimize_fitness_ga.py", cwd="src" }
+optimize_fitness_es = { cmd = "python optimize_fitness_es.py", cwd="src" }
+optimize_fitness_tde = { cmd = "python optimize_fitness_tde.py", cwd="src" }
+optimize_fitness_cmaes = { cmd = "python optimize_fitness_cmaes.py", cwd="src" }
+
+[dependencies]
+idyntree = "*"
+pyparsing = "*"
+casadi = "*"
+urchin = "*"
+numpy = "*"
+mujoco-python = "3.0.0"
+# This is a workaround for https://github.com/conda-forge/manif-feedstock/issues/19
+# In a nutshell, manifpy and bipedal-locomotion-framework need to be compiled with the
+# same major version of the compiler, but this is not enforced in any way by conda solver
+# as a workaround, we carefully select a compatible version of manifpy and bipedal-locomotion-framework
+# See:
+# * https://github.com/conda-forge/pybind11-feedstock/issues/77
+# * https://github.com/conda-forge/conda-forge.github.io/issues/2326
+# for more context and details
+manifpy = { version = "0.0.4", build-number = "16" }
+bipedal-locomotion-framework = { version = "0.16.0", build-number = "0" }
+pygad = "*"
+scipy = "*"
+mujoco-python-viewer = "*"
+pandas = "*"
+prettytable = "*"
+urdfdom-py = "*"
+
+[pypi-dependencies]
+scikit-learn = "*"
+cmaes = "*"
+nevergrad = "*"
+# These two checkouts are the latest commits on branches adding_change_shape and reading_urdf_from_string as of 2024/11/14
+urdfmodifiers = { git = "https://github.com/CarlottaSartore/urdf-modifiers.git", rev = "b7ce901ec1cf1a9ab4a8a192bed72c55742dc4a7" }
+adam-robotics = { git = "https://github.com/CarlottaSartore/ADAM.git", rev = "f11c8f42dca57dce9fab51c98b9b5e043b29b664" }
