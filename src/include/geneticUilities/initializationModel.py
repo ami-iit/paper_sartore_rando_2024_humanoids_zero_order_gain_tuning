@@ -14,12 +14,9 @@ class InitializationModel():
         # Load the URDF file
         tree = ET.parse(urdf_path_original)
         root = tree.getroot()
+        
         # Convert the XML tree to a string
         self.robot_urdf_string_original = ET.tostring(root)
-
-        self.dataBase_instance = DatabaseFitnessFunction(
-            self.common_path + "/../../results/fitnessDatabase"
-        )
         ## Variable frequency 
         self.frequency_seconds_ik = 0.01
         self.frequency_milliseconds_centroidal_mpc = 100
