@@ -55,6 +55,7 @@ In the [src](https://github.com/ami-iit/paper_sartore_rando_2024_humanoids_zero_
 - `optimize_fitness_es`: optimize the fitness function using evolutionary strategies.
 - `optimize_fitness_tde`: optimize the fitness function using differential evolution.
 - `optimize_fitenss_cmaes`: optimize the fitness function using cmaes.
+- `check_output`: to check an actual simulation of ergocub walking with optimized gains. 
 
 :warning: Each of the file run a repetition optimization: 10 independent optimization perfromed for the fitness that considers the torques, and 10 independent run performed for the fitenss that does not consider the torques.
 
