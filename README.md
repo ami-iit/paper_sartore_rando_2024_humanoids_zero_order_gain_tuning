@@ -35,8 +35,11 @@ Authors* contributed equally to this work.
 
 ### Installation
 
-
 :warning: The repository depends on [HSL for IPOPT (Coin-HSL)](https://www.hsl.rl.ac.uk/ipopt/), to correctly link the library please substitute [this](./Dockerfile#L110) line of the docker image with the absolute path to the `coinhsl.zip`. In particular, for the paper experiments Coin-HSL 2019.05.21 have been used, but also later version should work fine. 
+
+To install the software in this repo, follow the instructions in either the "Docker Installation" or the "Pixi installation" section.
+
+#### Docker Installation
 
 ⚠️ This repository depends on [docker](https://docs.docker.com/)
 
@@ -47,6 +50,29 @@ git clone https://github.com/ami-iit/paper_sartore_rando_2024_humanoids_zero_ord
 cd paper_sartore_rando_2024_humanoids_zero_order_gain_tuning
 docker build --tag sartore_rando_humanoids_2024 . 
 ```
+
+#### Pixi Installation
+
+
+If you already have [pixi](https://pixi.sh/) installed in your machine, no installation is required, 
+just execute the scripts that you want to run with `pixi run` and pixi will install
+all required software and then run the script. For example run:
+
+~~~
+pixi run optimize_fitness_ga
+~~~
+
+to run an optimization with genetic algorithms or:
+
+~~~
+pixi run check_output --visualize
+~~~
+
+to visualize the output of an optimization.
+
+
+At the momement the pixi installation does not support using HSL solver.
+
 
 ### Running 
 
