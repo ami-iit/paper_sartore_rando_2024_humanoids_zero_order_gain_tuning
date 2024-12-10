@@ -92,13 +92,14 @@ In the [src](https://github.com/ami-iit/paper_sartore_rando_2024_humanoids_zero_
 ```bibtex
 @INPROCEEDINGS{SartoreRando2024gainTuning,
   author={Sartore, Carlotta and Rando, Marco and Romualdi, Giulio and Molinari, Cesare and Rosasco, Lorenzo and Pucci, Daniele},
-  booktitle={2024 IEEE-RAS 21st International Conference on Humanoid Robots (Humanoids)}, 
+  booktitle={2024 IEEE-RAS 23rd International Conference on Humanoid Robots (Humanoids)}, 
   title={Automatic Gain Tuning for Humanoid Robots Walking Architectures Using Gradient-Free Optimization Techniques}, 
   year={2024},
   volume={},
   number={},
-  pages={},
-  doi={}}
+  pages={996-1003},
+  keywords={Legged locomotion;Humanoid robots;Europe;Optimization methods;Organizations;Manuals;Trajectory;Tuning;Genetic algorithms;Convergence},
+  doi={10.1109/Humanoids58906.2024.10769876}}
 ```
 
 ### Maintainer
